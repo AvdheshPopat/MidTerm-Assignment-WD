@@ -1,4 +1,3 @@
-/* ---------- Palette (same charcoal + orange + amber) ---------- */
 :root {
   color-scheme: dark;
   --bg: #0b0b0c;
@@ -10,7 +9,6 @@
   --hairline: rgba(255, 255, 255, 0.08);
 }
 
-/* ---------- Base ---------- */
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -22,7 +20,7 @@ body {
   color: var(--text);
   margin: 0;
   line-height: 1.6;
-  letter-spacing: 0;               /* body text: tracking near zero */
+  letter-spacing: 0;               
   -webkit-font-smoothing: antialiased;
 }
 
@@ -34,15 +32,15 @@ main {
 
 section {
   margin: 4.5rem 0;
-  scroll-margin-top: 4.5rem;       /* keeps the sticky nav off the headings */
+  scroll-margin-top: 4.5rem;    
 }
 
-/* ---------- Typography: size-specific tracking and leading ---------- */
+
 h1 {
   font-size: clamp(2.25rem, 6vw, 3.5rem);
   font-weight: 700;
-  line-height: 1.05;               /* tight leading on large text */
-  letter-spacing: -0.03em;         /* negative tracking as text grows */
+  line-height: 1.05;               
+  letter-spacing: -0.03em;         
   margin: 1.25rem 0 0.5rem;
 }
 
@@ -63,7 +61,7 @@ h3 {
   margin: 0 0 0.25rem;
 }
 
-/* ---------- Links: every state styled ---------- */
+
 a,
 a:visited { color: var(--accent); }
 
@@ -76,7 +74,7 @@ button:focus-visible {
   border-radius: 6px;
 }
 
-/* ---------- Header ---------- */
+
 header {
   text-align: center;
   padding: 4.5rem 1.5rem 3rem;
@@ -99,7 +97,7 @@ header img {
   margin: 0;
 }
 
-/* ---------- Navbar: translucent material, flexbox, sticky ---------- */
+
 nav {
   position: sticky;
   top: 0;
@@ -122,12 +120,12 @@ nav ul {
 nav a,
 nav a:visited {
   display: block;
-  padding: 0.65rem 0.9rem;         /* comfortable tap target */
+  padding: 0.65rem 0.9rem;       
   color: var(--text);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
-  letter-spacing: 0.01em;          /* slight positive tracking on small text */
+  letter-spacing: 0.01em;          
   border-radius: 999px;
   transition: background 150ms ease-out, color 150ms ease-out;
 }
@@ -137,10 +135,10 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Feedback on press, instant */
+
 nav a:active { transform: scale(0.97); transition: transform 100ms ease-out; }
 
-/* ---------- Cards ---------- */
+
 .card {
   background: var(--card);
   padding: 1.5rem;
@@ -171,14 +169,12 @@ nav a:active { transform: scale(0.97); transition: transform 100ms ease-out; }
   letter-spacing: 0.01em;
 }
 
-/* ---------- ID selector ---------- */
 #about p {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--text);
 }
 
-/* ---------- Skills table ---------- */
 table {
   width: 100%;
   border-collapse: separate;
@@ -219,7 +215,6 @@ caption {
   padding-bottom: 0.75rem;
 }
 
-/* ---------- Interests ---------- */
 #interests ul {
   list-style: none;
   padding: 0;
@@ -239,7 +234,6 @@ caption {
 
 #interests li:active { transform: scale(0.97); }
 
-/* ---------- Footer ---------- */
 footer#contact {
   text-align: center;
   padding: 3.5rem 1.5rem;
@@ -250,7 +244,6 @@ footer h2 { margin-bottom: 1rem; }
 
 address { font-style: normal; }
 
-/* ---------- Mobile: nav becomes a swipeable pill bar ---------- */
 @media (max-width: 600px) {
   nav ul {
     justify-content: flex-start;
@@ -263,7 +256,6 @@ address { font-style: normal; }
   section { margin: 3.5rem 0; }
 }
 
-/* ---------- Accessibility ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
@@ -299,8 +291,6 @@ header img { animation: materialize 800ms var(--ease) both; }
 h1         { animation: rise 700ms var(--ease) 120ms both; }
 .tagline   { animation: rise 700ms var(--ease) 220ms both; }
 
-/* Scroll-driven effects. Wrapped in @supports so that browsers
-   without support just show the page normally. */
 @supports (animation-timeline: view()) {
   section h2,
   #about p,
